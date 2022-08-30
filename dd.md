@@ -11,8 +11,8 @@
     sudo fdisk -l   #sudo lsblk -l
 ### UNMOUNT TARGET
     sudo umount /dev/sdb
-### COPY
-    sudo dd if=/dev/sdb of=/media/z/e9503728-f419-4a14-9fc0-21e2947af50c/FILE/MVPC10.img status=progress conv=noerror    #bs=1M
-### PASTE
-    sudo dd if=/media/z/e9503728-f419-4a14-9fc0-21e2947af50c/FILE/MVPC10.img of=/dev/sdb status=progress conv=noerror    #bs=1M
+### SAVE
+    sudo dd if=/dev/sdb of=/media/z/0/MVPC/IMAGE/v1.1.img status=progress conv=noerror    #bs=1M
+### WRITE
+    sudo dd if=/media/z/0/MVPC/IMAGE/v1.1.img of=/dev/sdb status=progress conv=noerror    #bs=1M
     
