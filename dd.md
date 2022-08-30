@@ -11,8 +11,8 @@
     sudo fdisk -l   #sudo lsblk -l
 ### UNMOUNT TARGET
     sudo umount /dev/sdb
-### SAVE
+### COPY
     sudo dd if=/dev/sdb of=/media/z/0/MVPC/IMAGE/v1.1.img status=progress conv=noerror    #bs=1M
-### WRITE
+### PASTE
     sudo dd if=/media/z/0/MVPC/IMAGE/v1.1.img of=/dev/sdb status=progress conv=noerror    #bs=1M
     
