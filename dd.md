@@ -4,9 +4,9 @@
 ### UNMOUNT TARGET
     sudo umount /dev/sdb
 ### COPY
-    sudo dd if=/dev/sdb of=/media/z/0/MVPC/IMAGE/v1.1.img status=progress conv=noerror    #bs=1M
+    sudo dd if=/dev/sdb of=/media/z/0/MVPC10/IMAGE/v1.1.img status=progress conv=noerror    #bs=1M
 ### PASTE
-    sudo dd if=/media/z/0/MVPC/IMAGE/v1.1.img of=/dev/sdb status=progress conv=noerror    #bs=1M
+    sudo dd if=/media/z/0/MVPC10/IMAGE/v1.1.img of=/dev/sdb status=progress conv=noerror    #bs=1M
     
     
 # BACKUP OS IMG
