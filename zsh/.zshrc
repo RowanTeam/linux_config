@@ -63,6 +63,7 @@ alias mcar="make clean all run"
 
 ## pip
 alias p="pip3 install"
+alias pu="pip3 install -U"
 
 ################################################################################ MVPC
 
