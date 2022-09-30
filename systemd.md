@@ -11,8 +11,11 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
     After=network.target
 
     [Service]
+    WorkingDirectory=/home/pi/gappi
     ExecStart=<PYTHON_PATH> <PATH_TO_SCRIPT>.py
-
+    Restart=on-failure
+    RestartSec=1s
+    
     [Install]
     WantedBy=multi-user.target
 Save it
