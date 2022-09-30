@@ -23,16 +23,15 @@ Save it
 ### 4. reload all Systemd services
     sudo systemctl daemon-reload
 
-### 5. Enable autostart on boot of your new service
+#### 5. Enable autostart on boot of your new service
     sudo systemctl enable <SERVICE_NAME>.service
+##### 6. RESTART
+    sudo systemctl restart <SERVICE_NAME>.service
+##### 7. STATUS
+    sudo systemctl status <SERVICE_NAME>.service
 
-### 6. sevice commands
+### SYSTEMD COMMANDS
 ##### Stop
-    sudo systemctl stop <YOUR-NAME>.service
-##### RESTART
-    sudo systemctl restart <YOUR-NAME>.service
-##### STATUS
-    sudo systemctl status <YOUR-NAME>.service
-This will also show you the last few lines logged by your script (e.g. print statements).
+    sudo systemctl stop <SERVICE_NAME>.service
 ##### DISABLE AUTOSTART
-    sudo systemctl disable <YOUR-NAME>.service
+    sudo systemctl disable <SERVICE_NAME>.service
