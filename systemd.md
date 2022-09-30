@@ -5,7 +5,7 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 ### 2. Create a service
     sudo systemctl --force --full edit <SERVICE_NAME>.service
     
-### 3.paste
+### 3. paste
     [Unit]
     Description=<(Optional) Description of your project>
     After=network.target
@@ -25,3 +25,14 @@ Save it
 
 ### 5. Enable autostart on boot of your new service
     sudo systemctl enable <SERVICE_NAME>.service
+
+### 6. sevice commands
+#### Stop
+    sudo systemctl stop <YOUR-NAME>.service
+#### RESTART
+    sudo systemctl restart <YOUR-NAME>.service
+#### STATUS
+    sudo systemctl status <YOUR-NAME>.service
+This will also show you the last few lines logged by your script (e.g. print statements).
+#### DISABLE AUTOSTART
+    sudo systemctl disable <YOUR-NAME>.service
