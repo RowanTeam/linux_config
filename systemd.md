@@ -27,12 +27,12 @@ Save it
     sudo systemctl enable <SERVICE_NAME>.service
 
 ### 6. sevice commands
-Stop
+##### Stop
     sudo systemctl stop <YOUR-NAME>.service
-RESTART
+##### RESTART
     sudo systemctl restart <YOUR-NAME>.service
-STATUS
+##### STATUS
     sudo systemctl status <YOUR-NAME>.service
 This will also show you the last few lines logged by your script (e.g. print statements).
-DISABLE AUTOSTART
+##### DISABLE AUTOSTART
     sudo systemctl disable <YOUR-NAME>.service
