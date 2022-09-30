@@ -35,3 +35,6 @@ Save it
     sudo systemctl stop <SERVICE_NAME>.service
 ##### DISABLE AUTOSTART
     sudo systemctl disable <SERVICE_NAME>.service
+##### see full staus & log    
+    journalctl -u <service_name>.service
+
