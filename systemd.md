@@ -39,5 +39,6 @@ Save it
     sudo systemctl revert <SERVICE_NAME>.service
 
 ##### see full staus & log    
-    journalctl -u <service_name>.service
-
+    sudo journalctl -u <service_name>.service
+##### remove all logs
+    sudo journalctl --rotate --vacuum-time=1s
