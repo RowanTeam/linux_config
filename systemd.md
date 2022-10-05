@@ -5,7 +5,6 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 ### 2. Create a service
     cd /etc/systemd/system
     sudo nano <SERVICE_NAME>
-    
 #sudo systemctl --force --full edit <SERVICE_NAME>.service
 (alterative)
     
