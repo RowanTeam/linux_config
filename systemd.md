@@ -3,7 +3,11 @@
 This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 
 ### 2. Create a service
-    sudo systemctl --force --full edit <SERVICE_NAME>.service
+    cd /etc/systemd/system
+    sudo nano <SERVICE_NAME>
+    
+#sudo systemctl --force --full edit <SERVICE_NAME>.service
+(alterative)
     
 ### 3. paste
     [Unit]
@@ -18,7 +22,7 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
     
     [Install]
     WantedBy=multi-user.target
-Save it
+<PYTHON_PATH> = /usr/bin/env python3
 
 ### 4. reload all Systemd services
     sudo systemctl daemon-reload
