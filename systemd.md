@@ -3,8 +3,10 @@
 This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 
 ### 2. Create a service
+    srvc="mvpc10.service"
+    
     cd /etc/systemd/system
-    sudo nano <SERVICE_NAME>
+    sudo nano srvc
 #sudo systemctl --force --full edit <SERVICE_NAME>.service
 (alterative)
     
@@ -25,23 +27,30 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 
 ### 4. reload all Systemd services
     sudo systemctl daemon-reload
+    sudo systemctl enable srvc
+    sudo systemctl restart srvc
+    sudo systemctl status srvc
 
-#### 5. Enable autostart on boot of your new service
-    sudo systemctl enable <SERVICE_NAME>.service
-##### 6. RESTART
-    sudo systemctl restart <SERVICE_NAME>.service
-##### 7. STATUS
-    sudo systemctl status <SERVICE_NAME>.service
+### 5. REMOVE
+    srvc="mvpc10.service"
+    systemctl stop srvc
+    systemctl disable srvc
+    rm /etc/systemd/system/srvc
+    rm /etc/systemd/system/srvc
+    rm /usr/lib/systemd/system/srvc 
+    rm /usr/lib/systemd/system/srvc
+    systemctl daemon-reload
+    systemctl reset-failed
 
 ### SYSTEMD COMMANDS
 ##### Stop
-    sudo systemctl stop <SERVICE_NAME>.service
+    sudo systemctl stop srvc
 ##### DISABLE AUTOSTART
-    sudo systemctl disable <SERVICE_NAME>.service
+    sudo systemctl disable srvc
 ##### REMOVE SERVICE
-    sudo systemctl revert <SERVICE_NAME>.service
+    sudo systemctl revert srvc
 
 ##### see full staus & log    
-    sudo journalctl -u <service_name>.service
+    sudo journalctl -u srvc
 ##### remove all logs
     sudo journalctl --rotate --vacuum-time=1s
