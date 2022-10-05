@@ -3,7 +3,7 @@
 This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 
 ### 2. Create a service
-    srvc="mvpc10.service"
+    srvc="<NAME>.service"
     
     cd /etc/systemd/system
     sudo nano $srvc
@@ -32,13 +32,11 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
     sudo systemctl status $srvc
 
 ### 5. REMOVE
-    srvc="mvpc10.service"
+    srvc="<NAME>.service"
     
     sudo systemctl stop $srvc
     sudo systemctl disable $srvc
     sudo rm /etc/systemd/system/$srvc
-    sudo rm /etc/systemd/system/$srvc
-    sudo rm /usr/lib/systemd/system/$srvc 
     sudo rm /usr/lib/systemd/system/$srvc
     sudo systemctl daemon-reload
     sudo systemctl reset-failed
