@@ -33,6 +33,7 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 
 ### 5. REMOVE
     srvc="mvpc10.service"
+    
     systemctl stop srvc
     systemctl disable srvc
     rm /etc/systemd/system/srvc
