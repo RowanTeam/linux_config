@@ -6,7 +6,7 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
     srvc="mvpc10.service"
     
     cd /etc/systemd/system
-    sudo nano srvc
+    sudo nano $srvc
 #sudo systemctl --force --full edit <SERVICE_NAME>.service
 (alterative)
     
@@ -27,31 +27,31 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 
 ### 4. reload all Systemd services
     sudo systemctl daemon-reload
-    sudo systemctl enable srvc
-    sudo systemctl restart srvc
-    sudo systemctl status srvc
+    sudo systemctl enable $srvc
+    sudo systemctl restart $srvc
+    sudo systemctl status $srvc
 
 ### 5. REMOVE
     srvc="mvpc10.service"
     
-    sudo systemctl stop srvc
-    sudo systemctl disable srvc
-    sudo rm /etc/systemd/system/srvc
-    sudo rm /etc/systemd/system/srvc
-    sudo rm /usr/lib/systemd/system/srvc 
-    sudo rm /usr/lib/systemd/system/srvc
+    sudo systemctl stop $srvc
+    sudo systemctl disable $srvc
+    sudo rm /etc/systemd/system/$srvc
+    sudo rm /etc/systemd/system/$srvc
+    sudo rm /usr/lib/systemd/system/$srvc 
+    sudo rm /usr/lib/systemd/system/$srvc
     sudo systemctl daemon-reload
     sudo systemctl reset-failed
 
 ### SYSTEMD COMMANDS
 ##### Stop
-    sudo systemctl stop srvc
+    sudo systemctl stop $srvc
 ##### DISABLE AUTOSTART
-    sudo systemctl disable srvc
+    sudo systemctl disable $srvc
 ##### REMOVE SERVICE
-    sudo systemctl revert srvc
+    sudo systemctl revert $srvc
 
 ##### see full staus & log    
-    sudo journalctl -u srvc
+    sudo journalctl -u $srvc
 ##### remove all logs
     sudo journalctl --rotate --vacuum-time=1s
