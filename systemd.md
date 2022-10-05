@@ -34,14 +34,14 @@ This will return something like this /usr/bin/python3, use this as <PYTHON_PATH>
 ### 5. REMOVE
     srvc="mvpc10.service"
     
-    systemctl stop srvc
-    systemctl disable srvc
-    rm /etc/systemd/system/srvc
-    rm /etc/systemd/system/srvc
-    rm /usr/lib/systemd/system/srvc 
-    rm /usr/lib/systemd/system/srvc
-    systemctl daemon-reload
-    systemctl reset-failed
+    sudo systemctl stop srvc
+    sudo systemctl disable srvc
+    sudo rm /etc/systemd/system/srvc
+    sudo rm /etc/systemd/system/srvc
+    sudo rm /usr/lib/systemd/system/srvc 
+    sudo rm /usr/lib/systemd/system/srvc
+    sudo systemctl daemon-reload
+    sudo systemctl reset-failed
 
 ### SYSTEMD COMMANDS
 ##### Stop
