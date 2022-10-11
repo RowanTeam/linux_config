@@ -1,5 +1,4 @@
-######################## INIT ########################
-
+#### ------------------------------------------------ INIT
 # Set the prompt - Need this so the prompt will work.
 setopt prompt_subst
 
@@ -34,8 +33,7 @@ else
   PR_SET_CHARSET="%{$terminfo[enacs]%}"
 fi
 
-######################## PROMPT ########################
-
+#### ------------------------------------------------ PROMPT
 PROMPT='${PR_SET_CHARSET}\
 ${PR_RED}%(!.%SROOT%s.%n)${PR_GREY}@${PR_BLUE}%m:%l \
 ${PR_GREEN}%${PR_PWDLEN}<...<%~%<<\
@@ -53,4 +51,3 @@ PS2='${PR_CYAN}\
 ${PR_LIGHT_GREEN}%(_${PR_BLUE})\
 ${PR_CYAN}${PR_NO_COLOUR} '
 
-#######################################################
