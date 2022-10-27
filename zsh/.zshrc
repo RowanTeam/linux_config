@@ -1,39 +1,15 @@
-################################################################################ ZSH
-
-export python="python3"
-# Path to oh-my-zsh installation.
-export ZSH="/home/$USER/.oh-my-zsh"
-
-ZSH_THEME="max"
-
-plugins=(git zsh-autosuggestions sudo web-search copypath copyfile zsh-syntax-highlighting kubectl)
-
-source $ZSH/oh-my-zsh.sh
-
-## UPDATE
-DISABLE_UPDATE_PROMPT="true"
-export UPDATE_ZSH_DAYS=30
-# DISABLE_AUTO_UPDATE="true"
-
-## COMPLETION
-ENABLE_CORRECTION="true"
-# CASE_SENSITIVE="true"
-# make _ and - same : CASE_SENSITIVE must be off
-# HYPHEN_INSENSITIVE="true"
-
 ################################################################################ ALIAS
-
 ## APT
-alias i="sudo apt install"
-alias iy="sudo apt install -y"
+alias at="sudo apt"
 
-alias ua="sudo apt update && sudo apt upgrade && sudo apt autoclean && sudo apt autoremove"
-alias u="sudo apt update && sudo apt upgrade"
-alias uy="sudo apt update && sudo apt upgrade -y && sudo snap refresh"
-alias ud="sudo apt dist-upgrade"
-alias uf="sudo apt --fix-broken install"
-
-alias a="sudo apt autoclean && sudo apt autoremove"
+alias i="at install"
+alias iy="i -y"
+alias u="at update && at upgrade"
+alias a="at autoclean && at autoremove"
+alias ua="u && a"
+alias uy="u -y && sudo snap refresh"
+alias ud="at dist-upgrade"
+alias uf="at --fix-broken install"
 alias r="sudo dpkg -r"
 alias re="sudo dpkg --configure -a"
 
@@ -65,8 +41,45 @@ alias mcar="make clean all run"
 alias p="pip3 install"
 alias pu="pip3 install -U"
 
-################################################################################ MVPC
 
+## SYSTEMD
+alias sd="sudo systemctl"
+
+alias sdrl="sd daemon-reload"
+alias sdrf="sd reset-failed"
+
+alias sde="sd enable"
+alias sdd="sd disable"
+alias sdt="sd start"
+alias sdp="sd stop"
+alias sds="sd status"
+
+alias sdl="sudo journalctl -u"
+alias sdl_d="sudo journalctl --rotate --vacuum-time=1s"
+
+################################################################################ ZSH
+export python="python3"
+# Path to oh-my-zsh installation.
+export ZSH="/home/$USER/.oh-my-zsh"
+
+ZSH_THEME="max"
+
+plugins=(git zsh-autosuggestions sudo web-search copypath copyfile zsh-syntax-highlighting kubectl)
+
+source $ZSH/oh-my-zsh.sh
+
+## UPDATE
+DISABLE_UPDATE_PROMPT="true"
+export UPDATE_ZSH_DAYS=30
+# DISABLE_AUTO_UPDATE="true"
+
+## COMPLETION
+ENABLE_CORRECTION="true"
+# CASE_SENSITIVE="true"
+# make _ and - same : CASE_SENSITIVE must be off
+# HYPHEN_INSENSITIVE="true"
+
+################################################################################ MVPC
 alias sg0="cd ~/gap_sdk_v4.7.0/configs && source gapoc_b_v2.sh && cd ../occupancy_management/gap8_project_v2"
 alias sg1="cd ~/gap_sdk_v4.9.0/configs && source gapoc_b_v2.sh && cd"
 
@@ -86,7 +99,6 @@ alias gvr="make all run platform=gvsoc runner_args='--trace=insn'"
 alias gappi='ssh pi@192.168.0.$pi'
 
 ################################################################################ CONDA
-
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/z/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -101,18 +113,15 @@ fi
 unset __conda_setup
 
 ################################################################################ KUBERNETES
-
 #autoload -Uz compinit
 #compinit
 
 source <(kubectl completion zsh)
 
 ################################################################################ ETC
-
 eval "$(register-python-argcomplete my-awesome-script)"
 
 ################################################################################ DOWNLOAD ONCE
-
 ## ARGCOMPLETE
 #pip3 install argcomplete
 #activate-global-python-argcomplete
@@ -127,7 +136,6 @@ eval "$(register-python-argcomplete my-awesome-script)"
 #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 ################################################################################ DEFAULT
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
