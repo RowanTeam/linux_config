@@ -1,4 +1,4 @@
-################################################################################ ALIAS
+## -------------------------------------------------------------------------------- ALIAS
 ## APT
 alias at="sudo apt"
 
@@ -57,7 +57,7 @@ alias sds="sd status"
 alias sdl="sudo journalctl -u"
 alias sdl_d="sudo journalctl --rotate --vacuum-time=1s"
 
-################################################################################ ZSH
+## -------------------------------------------------------------------------------- ZSH
 export python="python3"
 # Path to oh-my-zsh installation.
 export ZSH="/home/$USER/.oh-my-zsh"
@@ -79,7 +79,7 @@ ENABLE_CORRECTION="true"
 # make _ and - same : CASE_SENSITIVE must be off
 # HYPHEN_INSENSITIVE="true"
 
-################################################################################ MVPC
+## -------------------------------------------------------------------------------- MVPC
 alias sg0="cd ~/gap_sdk_v4.7.0/configs && source gapoc_b_v2.sh && cd ../occupancy_management/gap8_project_v2"
 alias sg1="cd ~/gap_sdk_v4.9.0/configs && source gapoc_b_v2.sh && cd"
 
@@ -98,7 +98,7 @@ alias gvr="make all run platform=gvsoc runner_args='--trace=insn'"
 
 alias gappi='ssh pi@192.168.0.$pi'
 
-################################################################################ CONDA
+## -------------------------------------------------------------------------------- CONDA
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/z/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -112,16 +112,16 @@ else
 fi
 unset __conda_setup
 
-################################################################################ KUBERNETES
+## -------------------------------------------------------------------------------- KUBERNETES
 #autoload -Uz compinit
 #compinit
 
 source <(kubectl completion zsh)
 
-################################################################################ ETC
+## -------------------------------------------------------------------------------- ETC
 eval "$(register-python-argcomplete my-awesome-script)"
 
-################################################################################ DOWNLOAD ONCE
+## -------------------------------------------------------------------------------- DOWNLOAD ONCE
 ## ARGCOMPLETE
 #pip3 install argcomplete
 #activate-global-python-argcomplete
@@ -135,7 +135,7 @@ eval "$(register-python-argcomplete my-awesome-script)"
 ## zsh-syntax-highlighting
 #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-################################################################################ DEFAULT
+## -------------------------------------------------------------------------------- DEFAULT
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
