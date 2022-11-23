@@ -57,6 +57,9 @@ alias sds="sd status"
 alias sdl="sudo journalctl -u"
 alias sdl_d="sudo journalctl --rotate --vacuum-time=1s"
 
+## ESP-IDF
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
 ## -------------------------------------------------------------------------------- ZSH
 export python="python3"
 # Path to oh-my-zsh installation.
