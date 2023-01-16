@@ -9,13 +9,17 @@
             server {
                     listen 1935;
                     chunk_size 4096;
-
+                    allow publish 127.0.0.1;
+                    deny publish all;
+                    
                     application live {
                             live on;
                             record off;
                     }
             }
     }
+
+
 
 ## 3. RESTART
     service nginx restart
