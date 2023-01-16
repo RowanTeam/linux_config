@@ -18,7 +18,8 @@
     }
 
 ## 3. RESTART
-    service nginx start
-    service nginx stop
+    service nginx restart
+<!--     service nginx start -->
+<!--     service nginx stop -->
 
 rtmp://127.0.0.1:1935/live/1234
