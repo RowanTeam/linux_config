@@ -82,24 +82,9 @@ ENABLE_CORRECTION="true"
 # make _ and - same : CASE_SENSITIVE must be off
 # HYPHEN_INSENSITIVE="true"
 
-## -------------------------------------------------------------------------------- MVPC
-alias sg0="cd ~/gap_sdk_v4.7.0/configs && source gapoc_b_v2.sh && cd ../occupancy_management/gap8_project_v2"
-alias sg1="cd ~/gap_sdk_v4.9.0/configs && source gapoc_b_v2.sh && cd"
-
-alias cal="cd ~/gap_sdk_v4.7.0/configs && source gapoc_b_v2.sh && cd ../occupancy_management/dataset_tools/gap8_capture_raw_images && make clean all run"
-alias calcp="cp offset_img/Calibration.bin ../../gap8_project_v2/Calibration/"
-
-alias ca_nn="conda activate nntool"
-
-alias gv="platform=gvsoc"
-alias gvr="platform=gvsoc runner_args=--vcd"
-alias gvr="make all run platform=gvsoc runner_args='--trace=insn'"
-
-#export GAPY_OPENOCD_CABLE=interface/ftdi/gapuino_ftdi.cfg
-#export GAPY_OPENOCD_CABLE=interface/jlink.cfg
-#export OPENOCD_CABLE=interface/jlink.cfg
-
-alias gappi='ssh pi@192.168.0.$pi'
+## -------------------------------------------------------------------------------- CUSTOM
+alias tp0 = "sudo modprobe -r psmouse && sudo modprobe psmouse"
+alias tp1 = "/sbin/rmmod i2c_hid && /sbin/modprobe i2c_hid"
 
 ## -------------------------------------------------------------------------------- CONDA
 # !! Contents within this block are managed by 'conda init' !!
