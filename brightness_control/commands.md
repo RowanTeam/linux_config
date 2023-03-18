@@ -6,3 +6,5 @@
 10 < desired value < max_brightness (-10)
 
 ## command to key shortcut
+
+[helpful link](https://www.bobjohnson.com/bloghow-to-install-ubuntu-on-a-panasonic-toughbook-cf31/)
